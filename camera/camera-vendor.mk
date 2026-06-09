@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += \
     libbsproxy \
     libc++_shared_aiunit \
     libcore_tokenizers_aiunit \
-    libcsextimpl \
     libdatastore_shared_counter_aiunit \
     libextendfile_system_ext \
     libjni_wideselfie \
