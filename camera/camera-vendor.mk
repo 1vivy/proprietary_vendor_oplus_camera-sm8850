@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     libCombineLutJni \
     libFileExtender-jni \
     libHeifEncoderWrapper \
+    libHeifWinBufExchg-jni \
     libMsEffectSdk \
     libNativeWinBuffExchange \
     libOplusBlurPreviewJNI \
@@ -41,16 +42,23 @@ PRODUCT_PACKAGES += \
     libXDocProcessSDK-jni \
     libXDocProcessSDK_system_ext \
     libYTCommon_system_ext \
+    libaiunit_framework_aiunit \
+    libaiunit_framework_jni_aiunit \
+    libaiunit_sdk_core_aiunit \
     libapssuspend-jni.oplus \
     libarcsoft_wideselfie \
     libbsproxy \
+    libc++_shared_aiunit \
+    libcore_tokenizers_aiunit \
     libcsextimpl \
+    libdatastore_shared_counter_aiunit \
     libextendfile_system_ext \
     libjni_wideselfie \
     libjnisingleblur_api \
     libjnistblur_api \
     liblivephoto.frc.jni \
     libmpbase_system_ext \
+    libopencv_java4_aiunit \
     liboplus-uah-client_system_ext \
     liboplusheifwriter \
     liboplushwui_jni \
@@ -62,6 +70,19 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.cameraMDM@1.0 \
     vendor.oplus.hardware.sendextcamcmd-V2-ndk_system_ext \
     libOplusSecurity \
+    AIUnit \
     OplusCamera \
+    OppoGallery2 \
+    StdID \
+    VideoGallery \
     com.oplus.camera.unit.sdk.adapter \
     com.oplus.camera.unit.sdk
+
+PRODUCT_PACKAGES += \
+    system_ext_priv-app_AIUnit_lib_arm64_libaiunit_framework_so \
+    system_ext_priv-app_AIUnit_lib_arm64_libaiunit_framework_jni_so \
+    system_ext_priv-app_AIUnit_lib_arm64_libaiunit_sdk_core_so \
+    system_ext_priv-app_AIUnit_lib_arm64_libc++_shared_so \
+    system_ext_priv-app_AIUnit_lib_arm64_libcore_tokenizers_so \
+    system_ext_priv-app_AIUnit_lib_arm64_libdatastore_shared_counter_so \
+    system_ext_priv-app_AIUnit_lib_arm64_libopencv_java4_so

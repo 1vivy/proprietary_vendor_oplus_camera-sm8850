@@ -601,6 +601,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libHeifWinBufExchg-jni",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libHeifWinBufExchg-jni.so",
+            ],
+            shared_libs: [
+                "libHeifEncoderWrapper",
+                "libNativeWinBuffExchange",
+                "liblog",
+                "libandroid",
+                "libjnigraphics",
+                "libGLESv2",
+                "libEGL",
+                "libnativewindow",
+                "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libMsEffectSdk",
     owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
     strip: {
@@ -850,6 +882,66 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libaiunit_framework_aiunit",
+    stem: "libaiunit_framework",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libaiunit_framework.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaiunit_framework_jni_aiunit",
+    stem: "libaiunit_framework_jni",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libaiunit_framework_jni.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaiunit_sdk_core_aiunit",
+    stem: "libaiunit_sdk_core",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libaiunit_sdk_core.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libapssuspend-jni.oplus",
     owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
     strip: {
@@ -931,6 +1023,46 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libc++_shared_aiunit",
+    stem: "libc++_shared",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libc++_shared.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcore_tokenizers_aiunit",
+    stem: "libcore_tokenizers",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libcore_tokenizers.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcsextimpl",
     owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
     strip: {
@@ -1000,6 +1132,26 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdatastore_shared_counter_aiunit",
+    stem: "libdatastore_shared_counter",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdatastore_shared_counter.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -1160,6 +1312,26 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libopencv_java4_aiunit",
+    stem: "libopencv_java4",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libopencv_java4.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -1482,6 +1654,18 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
+    name: "AIUnit",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    apk: "proprietary/system_ext/priv-app/AIUnit/AIUnit.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "OplusCamera",
     owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
     apk: "proprietary/system_ext/priv-app/OplusCamera/OplusCamera.apk",
@@ -1489,6 +1673,42 @@ android_app_import {
         "Camera2",
         "GoogleCameraGo",
     ],
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "OppoGallery2",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    apk: "proprietary/system_ext/priv-app/OppoGallery2/OppoGallery2.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "StdID",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    apk: "proprietary/system_ext/priv-app/StdID/StdID.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "VideoGallery",
+    owner: "oplus/proprietary_vendor_oplus_camera-sm8850",
+    apk: "proprietary/system_ext/priv-app/VideoGallery/VideoGallery.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -1513,4 +1733,53 @@ dex_import {
         "proprietary/system_ext/framework/com.oplus.camera.unit.sdk.jar",
     ],
     system_ext_specific: true,
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libaiunit_framework_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libaiunit_framework.so",
+    symlink_target: "/system_ext/lib64/libaiunit_framework.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libaiunit_framework_jni_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libaiunit_framework_jni.so",
+    symlink_target: "/system_ext/lib64/libaiunit_framework_jni.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libaiunit_sdk_core_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libaiunit_sdk_core.so",
+    symlink_target: "/system_ext/lib64/libaiunit_sdk_core.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libc++_shared_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libc++_shared.so",
+    symlink_target: "/system_ext/lib64/libc++_shared.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libcore_tokenizers_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libcore_tokenizers.so",
+    symlink_target: "/system_ext/lib64/libcore_tokenizers.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libdatastore_shared_counter_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libdatastore_shared_counter.so",
+    symlink_target: "/system_ext/lib64/libdatastore_shared_counter.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_AIUnit_lib_arm64_libopencv_java4_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/AIUnit/lib/arm64/libopencv_java4.so",
+    symlink_target: "/system_ext/lib64/libopencv_java4.so",
 }
